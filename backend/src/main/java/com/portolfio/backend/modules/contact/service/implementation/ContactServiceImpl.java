@@ -18,13 +18,16 @@ public class ContactServiceImpl implements ContactService {
 
     private final ContactRepository contactRepository;
     private final ContactMapper contactMapper;
+    private final ContactEmailServiceImpl contactEmailService;
 
 
     @Override
     public ContactResponse createContact(ContactRequest contactRequest) {
 
         ContactEntity contact = contactMapper.toEntity(contactRequest);
+
         contactRepository.save(contact);
+        contactEmailService.sendContactNotifications(contact);
 
         return contactMapper.toResponse(contact);
     }

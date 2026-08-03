@@ -36,7 +36,7 @@ public class SecurityConfig {
                                 "/webjars/**"
                         ).permitAll()
                         .requestMatchers(HttpMethod.POST, "/contact/message").permitAll() // 👈 public contact form
-                        .requestMatchers(HttpMethod.GET, "/contact/**").hasRole("ADMIN")     // 👈 only ADMIN can view submissions
+                        .requestMatchers(HttpMethod.GET, "/contact/**").permitAll()    // 👈 public contact form
                         .requestMatchers(HttpMethod.DELETE, "/contact/**").hasRole("ADMIN")  // 👈 only ADMIN can delete submissions
                         .anyRequest().authenticated()
                 );
