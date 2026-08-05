@@ -1,36 +1,53 @@
 @import "tailwindcss";
 
+/* ─────────────────────────────────────────
+   base.css  —  CSS variables, reset, globals
+   ───────────────────────────────────────── */
+
 :root {
+  --color-ink:        #1A1A1A;
+  --color-ink-dark:   #000000;
+  --color-muted:      #333333;
+  --color-cream:      #F5F5F5;
+  --color-white:      #ffffff;
 
-    /* Brand colors */
-    --qd-forest: #2c3930;
-    --qd-forest-soft: #3f4f44;
-    --qd-wood: #a27b5c;
-    --qd-cream: #dcd7c9;
+  --font-display: 'DM Sans', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
 
-    /* Fonts */
-    --font-body: "Poppins", sans-serif;
-    --font-display: "Heavitas", "Poppins", sans-serif;
+  --radius-sm:  8px;
+  --radius-md:  16px;
+  --radius-lg:  24px;
 
-    /* Semantic colors */
-    --primary: var(--qd-forest);
-    --primary-hover: var(--qd-forest-soft);
-    --accent: var(--qd-wood);
-    --text: var(--qd-forest);
-    --muted-text: var(--qd-forest-soft);
-    --on-primary: var(--qd-cream);
-    --border: rgba(44, 57, 48, 0.16);
-
-    /* Backgrounds */
-    --page-bg: var(--qd-cream);
-    --section-tint: var(--qd-cream);
-    --surface: color-mix(in srgb, var(--qd-cream) 94%, white);
-    --surface-raised: color-mix(in srgb, var(--qd-cream) 88%, white);
-
-    /* Shadows */
-    --shadow: 0 18px 42px rgba(44, 57, 48, 0.1);
-    --shadow-hover: 0 24px 52px rgba(44, 57, 48, 0.16);
-
-    /* Radius */
-    --radius: 14px;
+  --shadow-sm:  0 4px 14px rgba(0,0,0,0.20);
+  --shadow-md:  0 8px 20px rgba(0,0,0,0.32);
+  --shadow-lg:  0 20px 50px rgba(0,0,0,0.10);
+  --shadow-xl:  0 32px 80px rgba(0,0,0,0.22);
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family:      var(--font-body);
+  background-color: var(--color-cream);
+  color:            var(--color-ink);
+  overflow-x:       hidden;
+}
+
+/* Noise-grain overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+}
+
+@keyframes slideDown { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
