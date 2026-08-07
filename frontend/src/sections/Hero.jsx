@@ -17,7 +17,7 @@ const { output: hireMeText } = useTypewriter("Hire me!", {
   speed: 120,
   startDelay: 400,
   loop: true,
-  pauseBeforeRestart: 1500, // how long "Hire me!" stays fully visible before retyping
+  pauseBeforeRestart: 2500, // how long "Hire me!" stays fully visible before retyping
 });
 
   const openResume = () => {
