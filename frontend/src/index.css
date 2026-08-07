@@ -1,15 +1,13 @@
 @import "tailwindcss";
 
-/* ─────────────────────────────────────────
-   base.css  —  CSS variables, reset, globals
-   ───────────────────────────────────────── */
-
 :root {
   --color-ink:        #1A1A1A;
   --color-ink-dark:   #000000;
   --color-muted:      #333333;
-  --color-cream:      #F5F5F5;
+  --color-cream:      #FDFBF7;
+  --color-taste:      #FEFDFC;
   --color-white:      #ffffff;
+  --color-mocha:      #EEEAE3;
 
   --font-display: 'DM Sans', sans-serif;
   --font-body:    'DM Sans', sans-serif;
@@ -24,23 +22,22 @@
   --shadow-xl:  0 32px 80px rgba(0,0,0,0.22);
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
+@layer base {
+  .container {
+    width: 80%;
+    max-width: 1400px;
+    margin-inline: auto;
+  }
 }
 
 html { scroll-behavior: smooth; }
 
 body {
   font-family:      var(--font-body);
-  background-color: var(--color-cream);
   color:            var(--color-ink);
   overflow-x:       hidden;
 }
 
-/* Noise-grain overlay */
 body::before {
   content: '';
   position: fixed;
@@ -51,3 +48,7 @@ body::before {
 }
 
 @keyframes slideDown { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes morphBlob { 0% { border-radius: 60% 40% 55% 45% / 45% 60% 40% 55%; } 50% { border-radius: 40% 60% 45% 55% / 60% 40% 55% 45%; } 100% { border-radius: 55% 45% 40% 60% / 40% 55% 60% 45%; } }
+@keyframes fadeUp { from { transform: translateY(32px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes floatBadge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
