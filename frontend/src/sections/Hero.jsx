@@ -46,7 +46,7 @@ const { output: hireMeText } = useTypewriter("Hire me!", {
 
       <div className="container grid grid-cols-1 items-center pb-8 pt-24 text-center md:grid-cols-2 md:pb-12 md:pt-28 md:text-left">
         {/* Hero Image */}
-        <div className="relative z-10 mt-12 mb-8 flex items-end justify-center animate-[fadeUp_0.9s_0.45s_ease_both] md:mb-0 md:mt-0 md:order-1">
+        <div className="relative z-10 mt-6 mb-8 flex items-end justify-center animate-[fadeUp_0.9s_0.45s_ease_both] md:mb-0 md:mt-0 md:order-1">
           <div className="relative w-[min(400px,90%)]">
             <div className="rounded border-2 border-[var(--color-ink)] p-3 shadow-[8px_8px_0_0_var(--color-muted)]">
               <img
