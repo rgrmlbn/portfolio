@@ -5,7 +5,7 @@ const NAV_LINKS = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  { label: "Certifications", href: "#certifications" },
+  // { label: "Certifications", href: "#certifications" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -27,7 +27,7 @@ export default function Navbar() {
         border-b
         border-[var(--color-ink-dark)]/10
         animate-[slideDown_.6s_ease_both]
-        max-md:px-6
+        max-md:px-1
         max-md:py-4
       "
     >
@@ -35,7 +35,11 @@ export default function Navbar() {
         {/* Left — Logo + Nav Links */}
         <div className="flex items-center gap-12">
           <a href="#home" className="flex items-center">
-            <img src={logo} alt="Logo" className="h-12 w-auto" />
+            <img
+              src={logo}
+              alt="Logo"
+              className="h-10 w-auto md:h-12"
+            />
           </a>
 
           {/* Divider */}
@@ -81,13 +85,16 @@ export default function Navbar() {
             href="mailto:youremail@example.com"
             className="
               flex
-              h-10
-              w-10
+              h-8
+              w-8
               items-center
               justify-center
               rounded
               bg-[var(--color-mocha)]
-              text-lg
+              text-base
+              md:h-10
+              md:w-10
+              md:text-lg
               text-[var(--color-muted)]
               transition-all
               duration-200
@@ -101,13 +108,16 @@ export default function Navbar() {
             href="tel:+10000000000"
             className="
               flex
-              h-10
-              w-10
+              h-8
+              w-8
               items-center
               justify-center
               rounded
               bg-[var(--color-mocha)]
-              text-lg
+              text-base
+              md:h-10
+              md:w-10
+              md:text-lg
               text-[var(--color-muted)]
               transition-all
               duration-200
@@ -123,13 +133,16 @@ export default function Navbar() {
             rel="noreferrer"
             className="
               flex
-              h-10
-              w-10
+              h-8
+              w-8
               items-center
               justify-center
               rounded
               bg-[var(--color-mocha)]
-              text-lg
+              text-base
+              md:h-10
+              md:w-10
+              md:text-lg
               text-[var(--color-muted)]
               transition-all
               duration-200
@@ -145,13 +158,16 @@ export default function Navbar() {
             rel="noreferrer"
             className="
               flex
-              h-10
-              w-10
+              h-8
+              w-8
               items-center
               justify-center
               rounded
               bg-[var(--color-mocha)]
-              text-lg
+              text-base
+              md:h-10
+              md:w-10
+              md:text-lg
               text-[var(--color-muted)]
               transition-all
               duration-200
