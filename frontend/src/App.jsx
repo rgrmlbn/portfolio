@@ -4,6 +4,7 @@ import Skills from "./components/sections/SkillSection";
 import Projects from "./components/sections/ProjectSection";
 import Contact from "./components/sections/ContactSection";
 import Footer from "./components/Footer";
+import ScrollToTopButton from "./components/ui/ScrollToTopButton";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <ScrollToTopButton />
     </>
   )
 }
