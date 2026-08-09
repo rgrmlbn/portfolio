@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/contact")
+@RequestMapping("/api/contact")
 @RequiredArgsConstructor
 @Valid
 public class ContactController {
 
     private final ContactService contactService;
 
-    @PostMapping("/message")
+    @PostMapping()
     ResponseEntity<ContactResponse> createContact(@Valid @RequestBody ContactRequest contactRequest) {
 
         return ResponseEntity.status(HttpStatus.CREATED).body(contactService.createContact(contactRequest));

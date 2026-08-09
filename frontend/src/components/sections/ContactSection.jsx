@@ -1,5 +1,5 @@
 // Contact.jsx
-import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import ContactForm from "../ContactForm";
 
 const contactMethods = [
@@ -16,7 +16,7 @@ const contactMethods = [
     href: "tel:+639461715407",
   },
   {
-    icon: FaLinkedin,
+    icon: FaLinkedinIn,
     type: "LinkedIn",
     value: "linkedin.com/roger-malabanan",
     href: "https://www.linkedin.com/in/roger-malabanan-a617b2381",

@@ -1,8 +1,8 @@
 import { FaGithub, FaLinkedinIn, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
-import logo from "../assets/images/logocon.png";
+import logo from "../../assets/images/logocon.png";
 
 const NAV_LINKS = [
-  { label: "About", href: "#about" },
+  { label: "About", href: "#home" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   // { label: "Certifications", href: "#certifications" },
@@ -35,11 +35,7 @@ export default function Navbar() {
         {/* Left — Logo + Nav Links */}
         <div className="flex items-center gap-12">
           <a href="#home" className="flex items-center">
-            <img
-              src={logo}
-              alt="Logo"
-              className="h-10 w-auto md:h-12"
-            />
+            <img src={logo} alt="Logo" className="h-10 w-auto md:h-12" />
           </a>
 
           {/* Divider */}
@@ -82,7 +78,7 @@ export default function Navbar() {
         {/* Right */}
         <div className="flex items-center gap-3">
           <a
-            href="mailto:youremail@example.com"
+            href="mailto:rogerabarico21@gmail.com"
             className="
               flex
               h-8
@@ -105,7 +101,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="tel:+10000000000"
+            href="tel:+639461715407"
             className="
               flex
               h-8
@@ -128,7 +124,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/rgrmlbn"
             target="_blank"
             rel="noreferrer"
             className="
@@ -153,7 +149,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/roger-malabanan-a617b2381/"
             target="_blank"
             rel="noreferrer"
             className="

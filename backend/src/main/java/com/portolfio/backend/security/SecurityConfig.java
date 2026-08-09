@@ -35,9 +35,9 @@ public class SecurityConfig {
                                 "/swagger-resources/**",
                                 "/webjars/**"
                         ).permitAll()
-                        .requestMatchers(HttpMethod.POST, "/contact/message").permitAll() // 👈 public contact form
-                        .requestMatchers(HttpMethod.GET, "/contact/**").permitAll()    // 👈 public contact form
-                        .requestMatchers(HttpMethod.DELETE, "/contact/**").hasRole("ADMIN")  // 👈 only ADMIN can delete submissions
+                        .requestMatchers(HttpMethod.POST, "/api/contact").permitAll()           // 👈 public contact form
+                        .requestMatchers(HttpMethod.GET, "/api/contact/**").hasRole("ADMIN")    // 👈 only ADMIN can get submissions
+                        .requestMatchers(HttpMethod.DELETE, "/api/contact/**").hasRole("ADMIN") // 👈 only ADMIN can delete submissions
                         .anyRequest().authenticated()
                 );
 

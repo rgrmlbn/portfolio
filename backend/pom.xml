@@ -117,6 +117,21 @@
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
 
+		<!-- ====================================================== -->
+		<!-- Database Migrations -->
+		<!-- ====================================================== -->
+
+		<!-- Flyway: Versioned, tracked database schema migrations -->
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+		</dependency>
+
+		<!-- Flyway MySQL: MySQL-specific support (required separately since Flyway 10) -->
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-mysql</artifactId>
+		</dependency>
 
 		<!-- ====================================================== -->
 		<!-- Rate Limiting -->

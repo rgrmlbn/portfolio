@@ -1,6 +1,7 @@
 // Projects.jsx
 import internfloPreview from "../../assets/images/projects/internflo/internfloprev.png";
 import dentalPreview from "../../assets/images/projects/dentalcare/dentalprev.png";
+import portfolioPreview from "../../assets/images/projects/portfolio/portfolioprev.png";
 import {
   FaGithub,
   FaReact,
@@ -17,6 +18,7 @@ import {
   SiGooglecloud,
   SiRedis,
   SiJsonwebtokens,
+  SiTailwindcss,
 } from "react-icons/si";
 
 const projects = [
@@ -36,6 +38,22 @@ const projects = [
     ],
     demoUrl: "#",
     githubUrl: "https://github.com/rgrmlbn/Dental-Appointment-System",
+    },
+  {
+    image: portfolioPreview,
+    alt: "Portfolio Preview",
+    title: "Portfolio",
+    description:
+      "A personal portfolio website built to showcase my skills, projects, and experience as a developer. Features a React and Tailwind CSS frontend with TanStack Query and Axios for data fetching, React Hook Form for validated contact submissions, and a Spring Boot backend with MySQL handling the contact form, containerized with Docker.",
+    techStack: [
+      { name: "Spring Boot", icon: SiSpring },
+      { name: "React", icon: FaReact },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "MySQL", icon: SiMysql },
+      { name: "Docker", icon: FaDocker },
+    ],
+    demoUrl: "#",
+    githubUrl: "https://github.com/rgrmlbn/portfolio",
   },
   {
     image: internfloPreview,
