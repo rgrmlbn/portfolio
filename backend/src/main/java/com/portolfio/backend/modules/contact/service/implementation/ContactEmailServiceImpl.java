@@ -1,12 +1,11 @@
 package com.portolfio.backend.modules.contact.service.implementation;
 
 import com.portolfio.backend.modules.contact.entity.ContactEntity;
-import jakarta.mail.internet.MimeMessage;
+import com.resend.Resend;
+import com.resend.services.emails.model.CreateEmailOptions;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;
@@ -17,11 +16,16 @@ import org.thymeleaf.spring6.SpringTemplateEngine;
 @Slf4j
 public class ContactEmailServiceImpl {
 
-    private final JavaMailSender mailSender;
     private final SpringTemplateEngine templateEngine;
+
+    @Value("${resend.api-key}")
+    private String resendApiKey;
 
     @Value("${app.notification-email}")
     private String ownerEmail;
+
+    @Value("${resend.from-email}")
+    private String fromEmail;
 
     @Async("emailTaskExecutor")
     public void sendContactNotifications(ContactEntity contact) {
@@ -38,14 +42,16 @@ public class ContactEmailServiceImpl {
 
             String htmlBody = templateEngine.process("email/notifications-me", context);
 
-            MimeMessage mimeMessage = mailSender.createMimeMessage();
-            MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
+            Resend resend = new Resend(resendApiKey);
 
-            helper.setTo(ownerEmail);
-            helper.setSubject("New portfolio message from " + contact.getName());
-            helper.setText(htmlBody, true);
+            CreateEmailOptions params = CreateEmailOptions.builder()
+                    .from(fromEmail)
+                    .to(ownerEmail)
+                    .subject("New portfolio message from " + contact.getName())
+                    .html(htmlBody)
+                    .build();
 
-            mailSender.send(mimeMessage);
+            resend.emails().send(params);
             log.info("Notification email sent to owner for message from {} on thread {}",
                     contact.getEmail(), Thread.currentThread().getName());
 
@@ -67,14 +73,16 @@ public class ContactEmailServiceImpl {
 
             String htmlBody = templateEngine.process("email/notifications-sender", context);
 
-            MimeMessage mimeMessage = mailSender.createMimeMessage();
-            MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
+            Resend resend = new Resend(resendApiKey);
 
-            helper.setTo(contact.getEmail());
-            helper.setSubject("Thanks for reaching out!");
-            helper.setText(htmlBody, true);
+            CreateEmailOptions params = CreateEmailOptions.builder()
+                    .from(fromEmail)
+                    .to(contact.getEmail())
+                    .subject("Thanks for reaching out!")
+                    .html(htmlBody)
+                    .build();
 
-            mailSender.send(mimeMessage);
+            resend.emails().send(params);
             log.info("Confirmation email sent to {} on thread {}",
                     contact.getEmail(), Thread.currentThread().getName());
 

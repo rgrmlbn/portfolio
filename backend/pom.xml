@@ -87,6 +87,12 @@
 			<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>com.resend</groupId>
+			<artifactId>resend-java</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
 		<!-- Thymeleaf: Server-side HTML templates (commonly used for email templates) -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
