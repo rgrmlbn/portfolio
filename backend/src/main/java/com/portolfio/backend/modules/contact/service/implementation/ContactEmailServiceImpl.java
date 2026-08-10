@@ -30,7 +30,7 @@ public class ContactEmailServiceImpl {
     @Async("emailTaskExecutor")
     public void sendContactNotifications(ContactEntity contact) {
         sendNotificationToMe(contact);
-        sendConfirmationToSender(contact);
+//        sendConfirmationToSender(contact);
     }
 
     private void sendNotificationToMe(ContactEntity contact) {
@@ -60,34 +60,34 @@ public class ContactEmailServiceImpl {
         }
     }
 
-    private void sendConfirmationToSender(ContactEntity contact) {
-        if (contact.getEmail() == null || contact.getEmail().isBlank()) {
-            log.warn("No sender email provided, skipping confirmation email for {}", contact.getName());
-            return;
-        }
-
-        try {
-            Context context = new Context();
-            context.setVariable("senderName", contact.getName());
-            context.setVariable("message", contact.getMessage());
-
-            String htmlBody = templateEngine.process("email/notifications-sender", context);
-
-            Resend resend = new Resend(resendApiKey);
-
-            CreateEmailOptions params = CreateEmailOptions.builder()
-                    .from(fromEmail)
-                    .to(contact.getEmail())
-                    .subject("Thanks for reaching out!")
-                    .html(htmlBody)
-                    .build();
-
-            resend.emails().send(params);
-            log.info("Confirmation email sent to {} on thread {}",
-                    contact.getEmail(), Thread.currentThread().getName());
-
-        } catch (Exception e) {
-            log.error("Failed to send confirmation email to sender: {}", e.getMessage(), e);
-        }
-    }
+//    private void sendConfirmationToSender(ContactEntity contact) {
+//        if (contact.getEmail() == null || contact.getEmail().isBlank()) {
+//            log.warn("No sender email provided, skipping confirmation email for {}", contact.getName());
+//            return;
+//        }
+//
+//        try {
+//            Context context = new Context();
+//            context.setVariable("senderName", contact.getName());
+//            context.setVariable("message", contact.getMessage());
+//
+//            String htmlBody = templateEngine.process("email/notifications-sender", context);
+//
+//            Resend resend = new Resend(resendApiKey);
+//
+//            CreateEmailOptions params = CreateEmailOptions.builder()
+//                    .from(fromEmail)
+//                    .to(contact.getEmail())
+//                    .subject("Thanks for reaching out!")
+//                    .html(htmlBody)
+//                    .build();
+//
+//            resend.emails().send(params);
+//            log.info("Confirmation email sent to {} on thread {}",
+//                    contact.getEmail(), Thread.currentThread().getName());
+//
+//        } catch (Exception e) {
+//            log.error("Failed to send confirmation email to sender: {}", e.getMessage(), e);
+//        }
+//    }
 }
