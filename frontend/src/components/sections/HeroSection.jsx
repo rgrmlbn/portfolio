@@ -83,7 +83,7 @@ export default function HeroSection() {
             Software Developer | Java & React
           </p>
 
-          <p className="mx-auto mb-8 max-w-[44ch] text-[0.9rem] leading-[1.65] text-[#555] md:mx-0 md:mb-10 md:text-[0.97rem] md:leading-[1.75]">
+          <p className="mx-auto mb-8 max-w-[44ch] text-[0.9rem] leading-[1.65] text-[var(--color-graph)] md:mx-0 md:mb-10 md:text-[0.97rem] md:leading-[1.75]">
             An individual with a passion for learning and growth; I approach
             every opportunity with enthusiasm and purpose. I bring foundational
             skills and an attitude focused on growth, problem-solving, and

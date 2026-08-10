@@ -152,7 +152,7 @@ export default function ContactForm() {
           {isPending ? "Sending..." : "Send Message"}
         </button>
 
-        <p className="text-center text-[0.72rem] text-[var(--color-muted)] sm:text-[0.78rem]">
+        <p className="text-center text-[0.72rem] text-[var(--color-graph)] sm:text-[0.78rem]">
           Your details are used only to reply to your message
         </p>
       </form>

@@ -30,7 +30,8 @@ public class ContactEmailServiceImpl {
     @Async("emailTaskExecutor")
     public void sendContactNotifications(ContactEntity contact) {
         sendNotificationToMe(contact);
-//        sendConfirmationToSender(contact);
+        // UNCOMMENT THIS IF YOU HAVE YOUR OWN DOMAIN REGISTERED TO RESENDER
+        // sendConfirmationToSender(contact);
     }
 
     private void sendNotificationToMe(ContactEntity contact) {
@@ -59,7 +60,7 @@ public class ContactEmailServiceImpl {
             log.error("Failed to send notification email to owner: {}", e.getMessage(), e);
         }
     }
-
+//    UNCOMMENT THIS IF YOU HAVE YOUR OWN DOMAIN REGISTERED TO RESENDER
 //    private void sendConfirmationToSender(ContactEntity contact) {
 //        if (contact.getEmail() == null || contact.getEmail().isBlank()) {
 //            log.warn("No sender email provided, skipping confirmation email for {}", contact.getName());

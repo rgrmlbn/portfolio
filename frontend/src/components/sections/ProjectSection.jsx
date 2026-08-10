@@ -96,7 +96,7 @@ function ProjectCard({
           {title}
         </h3>
 
-        <p className="mb-3 text-[0.82rem] leading-[1.6] text-[var(--color-muted)] md:mb-4 md:text-[0.88rem] md:leading-[1.65]">
+        <p className="mb-3 text-[0.82rem] leading-[1.6] text-[var(--color-graph)] md:mb-4 md:text-[0.88rem] md:leading-[1.65]">
           {description}
         </p>
 
