@@ -36,7 +36,7 @@ const projects = [
       { name: "JWT", icon: SiJsonwebtokens },
       { name: "Docker", icon: FaDocker },
     ],
-    demoUrl: "#",
+    demoUrl: "https://dentalcare-appointment.vercel.app/",
     githubUrl: "https://github.com/rgrmlbn/Dental-Appointment-System",
     },
   {
@@ -52,7 +52,7 @@ const projects = [
       { name: "MySQL", icon: SiMysql },
       { name: "Docker", icon: FaDocker },
     ],
-    demoUrl: "#",
+    demoUrl: "https://portfolio-roger-malabanan.vercel.app/",
     githubUrl: "https://github.com/rgrmlbn/portfolio",
   },
   {
