@@ -26,19 +26,21 @@ public class SecurityConfig {
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
 
-                .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(
-                                "/v3/api-docs/**",
-                                "/v3/api-docs.yaml",
-                                "/swagger-ui/**",
-                                "/swagger-ui.html",
-                                "/swagger-resources/**",
-                                "/webjars/**"
-                        ).permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/contact").permitAll()           // 👈 public contact form
-                        .requestMatchers(HttpMethod.GET, "/api/contact/**").hasRole("ADMIN")    // 👈 only ADMIN can get submissions
-                        .requestMatchers(HttpMethod.DELETE, "/api/contact/**").hasRole("ADMIN") // 👈 only ADMIN can delete submissions
-                        .anyRequest().authenticated()
+.authorizeHttpRequests(auth -> auth
+        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()   // 👈 add this first
+        .requestMatchers(
+                "/v3/api-docs/**",
+                "/v3/api-docs.yaml",
+                "/swagger-ui/**",
+                "/swagger-ui.html",
+                "/swagger-resources/**",
+                "/webjars/**"
+        ).permitAll()
+        .requestMatchers(HttpMethod.POST, "/api/contact").permitAll()
+        .requestMatchers(HttpMethod.GET, "/api/contact/**").hasRole("ADMIN")
+        .requestMatchers(HttpMethod.DELETE, "/api/contact/**").hasRole("ADMIN")
+        .anyRequest().authenticated()
+
                 );
 
         return http.build();
