@@ -181,7 +181,7 @@ export default function HeroSection() {
             <div className="mb-2 flex items-center justify-between md:mb-3">
               <a
                 href={resumePdf}
-                download
+                download="ROGER A. MALABANAN JR. - RESUME.pdf"
                 className="rounded bg-[var(--color-ink-dark)] px-3 py-1.5 text-xs uppercase font-semibold text-white transition-transform hover:-translate-y-0.5 md:px-4 md:py-2 md:text-sm"
               >
                 Download Resume
