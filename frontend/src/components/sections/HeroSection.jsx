@@ -67,7 +67,7 @@ export default function HeroSection() {
         {/* Hero Content */}
         <div className="relative z-10 animate-[fadeUp_0.9s_0.2s_ease_both] md:order-2">
           <p className="mb-[0.6rem] flex items-center justify-center gap-2 text-[0.85rem] font-medium tracking-[0.04em] text-[var(--color-ink)] md:justify-start md:text-[0.95rem]">
-            <span className="inline-block h-[2px] w-7 rounded bg-[var(--color-ink)]" />
+            <span className="inline-block h-[2px] w-5 rounded bg-[var(--color-ink)]" />
 
             <span className="inline-block w-[220px] text-left md:w-[240px]">
               {hireMeText}
