@@ -115,7 +115,9 @@ function ProjectCard({
         <div className="mt-auto flex gap-3">
           <a
             href={demoUrl}
-            className="flex flex-1 items-center justify-center gap-[0.4rem] rounded border-none bg-[var(--color-ink-dark)] px-4 py-[0.55rem] text-center font-[var(--font-body)] text-[0.72rem] font-bold uppercase tracking-[0.07em] text-[var(--color-white)] shadow-[0_4px_14px_rgba(0,0,0,0.2)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)] md:px-4 md:py-[0.6rem] md:text-[0.78rem]"
+            target="_blank"
+            rel="noopener"
+            className="flex flex-1 items-center justify-center gap-[0.4rem] rounded border-none bg-[var(--color-ink)] px-4 py-[0.55rem] text-center font-[var(--font-body)] text-[0.72rem] font-bold uppercase tracking-[0.07em] text-[var(--color-white)] shadow-[0_4px_14px_rgba(0,0,0,0.2)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)] md:px-4 md:py-[0.6rem] md:text-[0.78rem]"
           >
             <FaExternalLinkAlt className="shrink-0 text-[0.68rem] md:text-[0.72rem]" />
             View

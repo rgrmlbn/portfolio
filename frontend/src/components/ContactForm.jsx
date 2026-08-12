@@ -147,7 +147,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isPending}
-          className="mt-2 w-full rounded bg-[var(--color-ink)] px-5 py-2.5 text-[0.82rem] font-semibold text-[var(--color-white)] transition-opacity duration-200 hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 sm:px-6 sm:py-3 sm:text-[0.9rem]"
+          className="mt-2 w-full rounded bg-[var(--color-ink)] cursor-pointer px-5 py-2.5 text-[0.82rem] font-semibold text-[var(--color-white)] transition-opacity duration-200 hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 sm:px-6 sm:py-3 sm:text-[0.9rem]"
         >
           {isPending ? "Sending..." : "Send Message"}
         </button>

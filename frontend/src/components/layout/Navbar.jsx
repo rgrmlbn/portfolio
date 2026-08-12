@@ -97,7 +97,7 @@ export default function Navbar() {
               hover:-translate-y-0.5
             "
           >
-            <FaEnvelope />
+            <FaEnvelope className="text-[var(--color-ink-dark)]" />
           </a>
 
           <a
@@ -120,7 +120,7 @@ export default function Navbar() {
               hover:-translate-y-0.5
             "
           >
-            <FaPhoneAlt />
+            <FaPhoneAlt className="text-[var(--color-ink-dark)]" />
           </a>
 
           <a
@@ -145,7 +145,7 @@ export default function Navbar() {
               hover:-translate-y-0.5
             "
           >
-            <FaGithub />
+            <FaGithub className="text-[var(--color-ink-dark)]"/>
           </a>
 
           <a
@@ -170,7 +170,7 @@ export default function Navbar() {
               hover:-translate-y-0.5
             "
           >
-            <FaLinkedinIn />
+            <FaLinkedinIn className="text-[var(--color-ink-dark)]" />
           </a>
         </div>
       </div>

@@ -69,9 +69,9 @@ export default function HeroSection() {
           <p className="mb-[0.6rem] flex items-center justify-center gap-2 text-[0.85rem] font-medium tracking-[0.04em] text-[var(--color-ink)] md:justify-start md:text-[0.95rem]">
             <span className="inline-block h-[2px] w-7 rounded bg-[var(--color-ink)]" />
 
-            <span className="inline-flex items-center">
+            <span className="inline-block w-[220px] text-left md:w-[240px]">
               {hireMeText}
-              <span className="ml-[2px] inline-block h-[1em] w-[1.5px] bg-[var(--color-muted)] animate-[blink_1s_step-end_infinite]" />
+              <span className="ml-[2px] inline-block h-[1em] w-[1.5px] align-middle bg-[var(--color-muted)] animate-[blink_1s_step-end_infinite]" />
             </span>
           </p>
 
@@ -109,6 +109,7 @@ export default function HeroSection() {
                 font-bold
                 uppercase
                 tracking-[0.08em]
+                cursor-pointer
                 text-white
                 shadow-[0_4px_14px_rgba(0,0,0,0.2)]
                 transition-all
@@ -141,6 +142,7 @@ export default function HeroSection() {
                 font-bold
                 uppercase
                 tracking-[0.08em]
+                cursor-pointer
                 text-[var(--color-ink)]
                 shadow-[0_2px_8px_rgba(0,0,0,0.08)]
                 transition-all

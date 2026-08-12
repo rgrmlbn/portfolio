@@ -35,7 +35,7 @@ function ContactCard({ icon: Icon, type, value, href }) {
       href={href}
       target="_blank"
       rel="noopener"
-      className="group flex items-center gap-4 rounded border border-[var(--color-ink-dark)]/7 bg-[var(--color-white)] px-5 py-5 text-[var(--color-ink-dark)] no-underline transition-all duration-300 ease-out hover:-translate-y-[5px] hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)] md:gap-[1.1rem] md:px-6 md:py-5"
+      className="group flex items-center gap-4 rounded border border-[var(--color-ink)]/7 bg-[var(--color-white)] px-5 py-5 text-[var(--color-ink-dark)] no-underline transition-all duration-300 ease-out hover:-translate-y-[5px] hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)] md:gap-[1.1rem] md:px-6 md:py-5"
     >
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded bg-[#f0f0f0] md:h-[46px] md:w-[46px]">
         <Icon className="text-[1.05rem] text-[var(--color-ink-dark)] md:text-[1.15rem]" />
@@ -61,7 +61,7 @@ export default function ContactSection() {
           <p className="mb-[0.6rem] text-[0.70rem] font-semibold uppercase tracking-[0.18em] text-[var(--color-muted)] md:text-[0.78rem]">
             Get in Touch
           </p>
-          <h2 className="font-[var(--font-display)] text-[clamp(2rem,4vw,3rem)] font-black tracking-[-0.02em] text-[var(--color-ink-dark)]">
+          <h2 className="font-[var(--font-display)] text-[clamp(2rem,4vw,3rem)] font-black tracking-[-0.02em] text-[var(--color-ink)]">
             Contact Me
           </h2>
           <div className="mx-auto mt-4 h-[3px] w-35 rounded bg-[var(--color-ink-dark)]" />
@@ -71,7 +71,7 @@ export default function ContactSection() {
           {/* Left: contact info */}
           <div className="flex flex-col gap-4">
             <div className="mb-2">
-              <h3 className="text-[1.10rem] font-bold text-[var(--color-ink-dark)] md:text-[1.25rem]">
+              <h3 className="text-[1.10rem] font-bold text-[var(--color-ink)] md:text-[1.25rem]">
                 Let's talk
               </h3>
               <p className="mt-1 text-[0.7rem] leading-relaxed text-[var(--color-muted)] md:text-[0.95rem]">
