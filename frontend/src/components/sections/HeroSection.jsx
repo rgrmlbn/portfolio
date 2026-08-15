@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import profilePhoto from "../../assets/images/me.jpeg";
 import resumePdf from "../../assets/ROGER A. MALABANAN JR. - RESUME.pdf";
 import { useTypewriter } from "../hooks/useTypewriter";
@@ -7,6 +7,7 @@ import { FaEnvelope, FaFilePdf } from "react-icons/fa";
 const scrollToContact = () => {
   document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
 };
+
 
 export default function HeroSection() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
@@ -23,6 +24,16 @@ export default function HeroSection() {
       pauseBeforeDelete: 2000, // how long each phrase stays fully visible before deleting
     },
   );
+
+  useEffect(() => {
+    if (isResumeOpen) {
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = originalOverflow;
+      };
+    }
+  }, [isResumeOpen]);
 
   const openResume = () => {
     setIsResumeOpen(true);
@@ -171,15 +182,16 @@ export default function HeroSection() {
           `}
           onClick={closeResume}
         >
-          <div
-            className={`
-            relative flex h-[95vh] w-full max-w-7xl flex-col rounded bg-white p-3 shadow-[var(--shadow-xl)]
-            transition-all duration-200 ease-out
-            md:h-[90vh] md:p-4
-            ${isHidden ? "scale-95 opacity-0" : "scale-100 opacity-100"}
-          `}
-            onClick={(e) => e.stopPropagation()}
-          >
+            <div
+              className={`
+                relative flex h-[95vh] w-full max-w-7xl flex-col rounded bg-white p-3 shadow-[var(--shadow-xl)]
+                overflow-y-auto overscroll-contain
+                transition-all duration-200 ease-out
+                md:h-[90vh] md:p-4
+                ${isHidden ? "scale-95 opacity-0" : "scale-100 opacity-100"}
+              `}
+              onClick={(e) => e.stopPropagation()}
+            >
             <div className="mb-2 flex items-center justify-between md:mb-3">
               <a
                 href={resumePdf}
