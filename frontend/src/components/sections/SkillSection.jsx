@@ -4,7 +4,7 @@ const skillCategories = [
     title: "Frontend",
     skills: [
       {
-        name: "React",
+        name: "React JS",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
         tooltip:
           "A JavaScript library for creating interactive user interfaces, especially single-page applications using reusable components.",
