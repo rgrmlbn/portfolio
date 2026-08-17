@@ -27,15 +27,19 @@ public class ContactController {
     }
 
     @GetMapping()
-    ResponseEntity<List<ContactResponse>> getAllContacts() {
+    ResponseEntity<List<ContactResponse>> getAllContacts(
+            @RequestParam (defaultValue = "0") int page,
+            @RequestParam (defaultValue = "10")  int size,
+            @RequestParam (required = false ) String name) {
 
-        return ResponseEntity.ok(contactService.getAllContacts());
+        return ResponseEntity.ok(contactService.getAllContacts(page, size, name));
     }
 
     @GetMapping("/{id}")
     ResponseEntity<ContactResponse> getContactById(@PathVariable @Positive Long id) {
         return ResponseEntity.ok(contactService.getContactById(id));
     }
+
 
     @DeleteMapping("/{id}")
     ResponseEntity<Void> deleteContactById(@PathVariable @Positive Long id) {

@@ -8,6 +8,9 @@ import com.portolfio.backend.modules.contact.mapper.ContactMapper;
 import com.portolfio.backend.modules.contact.repository.ContactRepository;
 import com.portolfio.backend.modules.contact.service.interfaces.ContactService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -33,10 +36,23 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
-    public List<ContactResponse> getAllContacts() {
-        return contactRepository.findAll().stream()
-                .map(contactMapper::toResponse)
-                .toList();
+    public Page<ContactResponse> getAllContacts(
+            int page,
+            int size,
+            String name) {
+
+        Pageable pageable = PageRequest.of(page, size);
+
+        Page<ContactEntity> contacts;
+
+        if (name == null || name.isBlank()) {
+            contacts = contactRepository.findAll(pageable);
+        } else {
+            contacts = contactRepository
+                    .findByNameContainingIgnoreCase(name, pageable);
+        }
+
+        return contacts.map(contactMapper::toResponse);
     }
 
     @Override
