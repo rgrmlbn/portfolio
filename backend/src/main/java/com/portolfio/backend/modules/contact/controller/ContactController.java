@@ -6,6 +6,7 @@ import com.portolfio.backend.modules.contact.service.interfaces.ContactService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Positive;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,7 +28,7 @@ public class ContactController {
     }
 
     @GetMapping()
-    ResponseEntity<List<ContactResponse>> getAllContacts(
+    ResponseEntity<Page<ContactResponse>> getAllContacts(
             @RequestParam (defaultValue = "0") int page,
             @RequestParam (defaultValue = "10")  int size,
             @RequestParam (required = false ) String name) {

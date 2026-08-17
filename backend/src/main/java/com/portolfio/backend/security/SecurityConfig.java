@@ -37,7 +37,7 @@ public class SecurityConfig {
                 "/webjars/**"
         ).permitAll()
         .requestMatchers(HttpMethod.POST, "/api/contact").permitAll()
-        .requestMatchers(HttpMethod.GET, "/api/contact/**").hasRole("ADMIN")
+        .requestMatchers(HttpMethod.GET, "/api/contact/**").permitAll()
         .requestMatchers(HttpMethod.DELETE, "/api/contact/**").hasRole("ADMIN")
         .anyRequest().authenticated()
 
