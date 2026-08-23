@@ -17,8 +17,8 @@ export default function HeroSection() {
 
   const { output: hireMeText } = useTypewriter(
     [
-      "Always Learning, Always Building",
-      "Focused on Continuous Growth",
+      "Learn. Build. Grow.",
+      "Driven to Improve",
       "Ready for What's Next"
     ],
     {
