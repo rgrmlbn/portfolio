@@ -106,7 +106,7 @@ export default function ContactForm() {
             name="name"
             register={register}
             error={errors.name}
-            placeholder="Your name"
+            placeholder="Name"
             {...register("name", {
               required: "Name is required.",
               minLength: { value: 2, message: "Name is too short." },
