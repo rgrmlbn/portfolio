@@ -16,7 +16,11 @@ export default function HeroSection() {
   const rafRef = useRef(null);
 
   const { output: hireMeText } = useTypewriter(
-    ["Hire me", "Open to work", "Looking for opportunities"],
+    [
+      "Always Learning, Always Building",
+      "Focused on Continuous Growth",
+      "Ready for What's Next"
+    ],
     {
       speed: 120,
       deleteSpeed: 60,
