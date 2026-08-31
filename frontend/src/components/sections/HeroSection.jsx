@@ -95,7 +95,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="mb-[1.4rem] text-[1rem] font-medium tracking-[0.01em] text-[var(--color-muted)] md:text-[1.15rem]">
-            Software Developer | Java & Spring Boot | React
+            Software Developer | Java & React
           </p>
 
           <p className="mx-auto mb-8 max-w-[44ch] text-[0.9rem] leading-[1.65] text-[var(--color-graph)] md:mx-0 md:mb-10 md:text-[0.97rem] md:leading-[1.75]">
