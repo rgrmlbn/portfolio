@@ -29,7 +29,7 @@ const projects = [
     description:
       "Dental appointment system that enables clinics to manage patient records, schedule appointments, and streamline operations using a Spring ecosystem backend and React frontend. It features secure appointment booking, RESTful APIs, MySQL database integration, patient management, and Docker containerization for consistent deployment.",
     techStack: [
-      { name: "Spring", icon: SiSpring },
+      { name: "Spring Boot", icon: SiSpring },
       { name: "React", icon: FaReact },
       { name: "MySQL", icon: SiMysql },
       { name: "Redis", icon: SiRedis },

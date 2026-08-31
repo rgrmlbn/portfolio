@@ -1,8 +1,54 @@
 // Skills.jsx
+
+import mockitoLogo from "../../assets/mockito-logo.png";
+import assertjLogo from "../../assets/assertj-logo.png";
+import junitLogo from "../../assets/junit-logo.png";
+
 const skillCategories = [
   {
-    title: "Frontend",
+    title: "Languages",
     skills: [
+      {
+        name: "Java",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+        tooltip:
+          "A general-purpose, object-oriented programming language widely used for building enterprise-scale applications.",
+      },
+      {
+        name: "JavaScript",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        tooltip:
+          "A high-level scripting language that powers interactivity and dynamic behavior on the web.",
+      },
+      {
+        name: "PHP",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+        tooltip:
+          "A server-side scripting language designed for web development and dynamic page generation.",
+      },
+      {
+        name: "SQL",
+        icon: "https://cdn.jsdelivr.net/gh/vscode-icons/vscode-icons@master/icons/file_type_sql.svg", // vendor-neutral colored SQL icon (vscode-icons, MIT licensed)
+        tooltip:
+          "A standard language for querying, manipulating, and managing data in relational database systems.",
+      },
+      {
+        name: "VBA",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualbasic/visualbasic-original.svg",
+        tooltip:
+          "A Microsoft programming language used to automate tasks, build macros, and extend functionality within Excel and other Office applications.",
+      },
+    ],
+  },
+  {
+    title: "Frameworks & Libraries",
+    skills: [
+      {
+        name: "Spring",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+        tooltip:
+          "A Java framework ecosystem including Spring Boot, Spring Security, and Spring Data JPA for building production-ready backend applications.",
+      },
       {
         name: "React JS",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
@@ -15,84 +61,80 @@ const skillCategories = [
         tooltip:
           "A utility-first CSS framework used to rapidly build custom, responsive designs directly in markup.",
       },
-      {
-        name: "JavaScript",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-        tooltip:
-          "A high-level scripting language that powers interactivity and dynamic behavior on the web.",
-      },
-      {
-        name: "HTML5",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-        tooltip: "The standard markup language used to structure content on the web.",
-      },
-      {
-        name: "CSS3",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-        tooltip:
-          "A stylesheet language used to control the visual presentation and layout of HTML content.",
-      },
     ],
   },
   {
-    title: "Backend",
-    skills: [
-      {
-        name: "Java",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-        tooltip:
-          "A general-purpose, object-oriented programming language widely used for building enterprise-scale applications.",
-      },
-      {
-        name: "Spring Boot",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
-        tooltip:
-          "A Java-based framework for building standalone, production-ready backend applications with features for REST APIs, dependency injection, and rapid application development.",
-      },
-      {
-        name: "PHP",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-        tooltip: "A server-side scripting language designed for web development and dynamic page generation.",
-      },
-    ],
-  },
-  {
-    title: "Database",
+    title: "Databases",
     skills: [
       {
         name: "MySQL",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-        tooltip: "An open-source relational database management system widely used for web applications.",
+        tooltip:
+          "An open-source relational database management system widely used for web applications.",
       },
       {
-        name: "MS SQL",
+        name: "MS SQL Server",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
-        tooltip: "Microsoft's relational database management system used for storing and managing structured data.",
+        tooltip:
+          "Microsoft's relational database management system used for storing and managing structured data.",
       },
       {
         name: "MongoDB",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-        tooltip: "A NoSQL document database that stores data in flexible, JSON-like documents.",
+        tooltip:
+          "A NoSQL document database that stores data in flexible, JSON-like documents.",
       },
     ],
   },
   {
-    title: "Tools & Platforms",
+    title: "Testing",
     skills: [
+      {
+        name: "JUnit",
+        icon: junitLogo,
+        tooltip:
+          "A widely-used testing framework for writing and running unit tests in Java applications.",
+      },
+      {
+        name: "Mockito",
+        icon: mockitoLogo,
+        tooltip:
+          "A mocking framework for Java used to isolate and test components by simulating dependencies.",
+      },
+      {
+        name: "AssertJ",
+        icon: assertjLogo,
+        tooltip:
+          "A fluent assertion library for Java that makes test assertions more readable and expressive.",
+      },
+    ],
+  },
+  {
+    title: "Tools",
+    skills: [
+      {
+        name: "Docker",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+        tooltip:
+          "A platform for packaging applications and their dependencies into portable, consistent containers.",
+      },
       {
         name: "Git",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-        tooltip: "A distributed version control system for tracking changes in source code.",
+        tooltip:
+          "A distributed version control system for tracking changes in source code.",
       },
       {
         name: "GitHub",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-        tooltip: "A cloud-based platform for hosting, collaborating on, and managing Git repositories.",
+        tooltip:
+          "A cloud-based platform for hosting, collaborating on, and managing Git repositories.",
       },
       {
-        name: "Docker",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-        tooltip: "A platform for packaging applications and their dependencies into portable, consistent containers.",
+        name: "Postman",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+        tooltip:
+          "An API platform used to build, test, and document HTTP requests during backend development.",
       },
       {
         name: "Swagger",
@@ -100,33 +142,11 @@ const skillCategories = [
         tooltip:
           "A tool for designing, building, documenting, and testing RESTful APIs using the OpenAPI specification.",
       },
-      {
-        name: "Postman",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
-        tooltip: "An API platform used to build, test, and document HTTP requests during backend development.",
-      },
-      {
-        name: "Google Cloud",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
-        tooltip:
-          "Google's suite of cloud computing services for building, deploying, and scaling applications and infrastructure.",
-      },
-      {
-        name: "Excel VBA",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualbasic/visualbasic-original.svg",
-        tooltip:
-          "A Microsoft programming language used to automate tasks, build macros, and extend functionality within Excel and other Office applications.",
-      },
-      {
-        name: "Figma",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-        tooltip: "A collaborative design tool used for creating UI/UX designs, wireframes, and prototypes.",
-      },
     ],
   },
 ];
 
-function SkillCard({ name, icon, tooltip }) {
+function SkillCard({ name, icon, IconComponent, textBadge, tooltip }) {
   return (
     <div
       className="
@@ -136,7 +156,19 @@ function SkillCard({ name, icon, tooltip }) {
         hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)]
       "
     >
-      <img src={icon} alt={name} className="h-[54px] w-[54px] object-contain" />
+      {textBadge ? (
+        <div className="flex h-[54px] w-[54px] items-center justify-center rounded-full bg-[var(--color-ink)]/[0.06] text-[0.95rem] font-black tracking-tight text-[var(--color-ink)]">
+          {textBadge}
+        </div>
+      ) : IconComponent ? (
+        <IconComponent className="h-[54px] w-[54px] text-[var(--color-ink)]" />
+      ) : (
+        <img
+          src={icon}
+          alt={name}
+          className="h-[54px] w-[54px] object-contain"
+        />
+      )}
       <p className="m-0 text-center text-[0.82rem] font-semibold text-[var(--color-ink)]">
         {name}
       </p>
@@ -186,7 +218,10 @@ export default function SkillSection() {
 
         {/* Categories */}
         {skillCategories.map((category) => (
-          <div key={category.title} className="mx-auto mb-10 max-w-[350px] last:mb-0 md:max-w-[800px]">
+          <div
+            key={category.title}
+            className="mx-auto mb-10 max-w-[350px] last:mb-0 md:max-w-[800px]"
+          >
             <h3 className="mb-3 border-b border-[var(--color-ink-dark)]/10 pb-2 text-[0.85rem] font-bold uppercase tracking-[0.08em] text-[var(--color-ink)] md:mb-4 md:text-base">
               {category.title}
             </h3>
