@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedinIn, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import logo from "../../assets/images/logocon.png";
 
@@ -10,6 +11,25 @@ const NAV_LINKS = [
 ];
 
 export default function Navbar() {
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window === "undefined") return false;
+    const saved = localStorage.getItem("theme");
+    if (saved) return saved === "dark";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
+
+  const [isPopping, setIsPopping] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", darkMode);
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
+  }, [darkMode]);
+
+  const handleLogoClick = () => {
+    setDarkMode((prev) => !prev);
+    setIsPopping(true);
+  };
+
   return (
     <nav
       className="
@@ -34,15 +54,29 @@ export default function Navbar() {
       <div className="container flex items-center justify-between">
         {/* Left — Logo + Nav Links */}
         <div className="flex items-center gap-12">
-          <a href="#home" className="flex items-center">
-            <img src={logo} alt="Logo" className="h-10 w-auto md:h-12" />
-          </a>
+          <button
+            type="button"
+            onClick={handleLogoClick}
+            className="flex items-center cursor-pointer active:scale-90 transition-transform duration-150"
+            aria-label="Toggle dark mode"
+          >
+            <img
+              src={logo}
+              alt="Logo"
+              className="h-10 w-auto md:h-12"
+              style={
+                isPopping ? { animation: "logoPop 0.4s ease" } : undefined
+              }
+              onAnimationEnd={() => setIsPopping(false)}
+            />
+          </button>
 
           {/* Divider */}
           <div className="h-11 w-px bg-[var(--color-ink-dark)]/10" />
 
           <div className="hidden gap-10 md:flex">
             {NAV_LINKS.map((link) => (
+              
               <a
                 key={link.label}
                 href={link.href}
@@ -77,6 +111,7 @@ export default function Navbar() {
 
         {/* Right */}
         <div className="flex items-center gap-3">
+          
           <a
             href="mailto:rogerabarico21@gmail.com"
             className="
@@ -145,7 +180,7 @@ export default function Navbar() {
               hover:-translate-y-0.5
             "
           >
-            <FaGithub className="text-[var(--color-ink-dark)]"/>
+            <FaGithub className="text-[var(--color-ink-dark)]" />
           </a>
 
           <a

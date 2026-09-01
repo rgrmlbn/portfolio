@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --color-ink:        #1A1A1A;
   --color-ink-dark:   #000000;
@@ -23,7 +25,31 @@
   --shadow-xl:  0 32px 80px rgba(0,0,0,0.22);
 }
 
+.dark {
+  --color-ink:        #F2F0EC;
+  --color-ink-dark:   #FFFFFF;
+  --color-muted:      #CCCCCC;
+  --color-graph:      #AAAAAA;
+  --color-cream:      #16151A;
+  --color-taste:      #1C1B20;
+  --color-white:      #1A1A1A;
+  --color-mocha:      #2A2820;
+
+  --shadow-sm:  0 4px 14px rgba(0,0,0,0.45);
+  --shadow-md:  0 8px 20px rgba(0,0,0,0.55);
+  --shadow-lg:  0 20px 50px rgba(0,0,0,0.35);
+  --shadow-xl:  0 32px 80px rgba(0,0,0,0.5);
+}
+
 @layer base {
+  *,
+  *::before,
+  *::after {
+    transition-property: background-color, border-color, color, box-shadow;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+  }
+
   .container {
     width: 100%;
     max-width: 1400px;
@@ -44,6 +70,8 @@ body {
   font-family:      var(--font-body);
   color:            var(--color-ink);
   overflow-x:       hidden;
+  background-color: var(--color-cream);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body::before {
@@ -64,4 +92,11 @@ body::before {
 @keyframes toastIn {
   from { transform: translateY(-12px); opacity: 0; }
   to   { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes logoPop {
+  0%   { transform: scale(1); }
+  35%  { transform: scale(0.85); }
+  60%  { transform: scale(1.12); }
+  100% { transform: scale(1); }
 }

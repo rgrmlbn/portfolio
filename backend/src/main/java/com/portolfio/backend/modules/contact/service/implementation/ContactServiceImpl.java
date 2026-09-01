@@ -52,7 +52,7 @@ public class ContactServiceImpl implements ContactService {
                     .findByNameContainingIgnoreCase(name, pageable);
         }
 
-        return contacts.map(contactMapper::toResponse);
+        return contacts.map(contactEntity -> contactMapper.toResponse(contactEntity));
     }
 
     @Override

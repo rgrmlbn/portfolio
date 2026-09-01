@@ -37,7 +37,7 @@ function ContactCard({ icon: Icon, type, value, href }) {
       rel="noopener"
       className="group flex items-center gap-4 rounded border border-[var(--color-ink)]/7 bg-[var(--color-white)] px-5 py-5 text-[var(--color-ink-dark)] no-underline transition-all duration-300 ease-out hover:-translate-y-[5px] hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)] md:gap-[1.1rem] md:px-6 md:py-5"
     >
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded bg-[#f0f0f0] md:h-[46px] md:w-[46px]">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded bg-[var(--color-mocha)] md:h-[46px] md:w-[46px]">
         <Icon className="text-[1.05rem] text-[var(--color-ink-dark)] md:text-[1.15rem]" />
       </div>
 
