@@ -15,7 +15,7 @@ export default function Navbar() {
     if (typeof window === "undefined") return false;
     const saved = localStorage.getItem("theme");
     if (saved) return saved === "dark";
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return false; // always default to light, ignore OS preference
   });
 
   const [isPopping, setIsPopping] = useState(false);
