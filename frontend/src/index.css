@@ -47,7 +47,7 @@
   *::after {
     transition-property: background-color, border-color, color, box-shadow;
     transition-timing-function: ease;
-    transition-duration: 0.3s;
+    transition-duration: 0.1s;
   }
 
   .container {
