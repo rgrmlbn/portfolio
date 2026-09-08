@@ -25,7 +25,7 @@ const projects = [
   {
     image: dentalPreview,
     alt: "Dental Appointment System Preview",
-    title: "Dental Appointment System",
+    title: "DentalCare — Dental Appointment System",
     description:
       "Dental appointment system that enables clinics to manage patient records, schedule appointments, and streamline operations using a Spring ecosystem backend and React frontend. It features secure appointment booking, RESTful APIs, MySQL database integration, patient management, and Docker containerization for consistent deployment.",
     techStack: [
@@ -42,7 +42,7 @@ const projects = [
   {
     image: portfolioPreview,
     alt: "Portfolio Preview",
-    title: "Portfolio",
+    title: "Portfolio — Personal Website",
     description:
       "A personal portfolio website built to showcase my skills, projects, and experience as a developer. Features a React and Tailwind CSS frontend with TanStack Query and Axios for data fetching, React Hook Form for validated contact submissions, and a Spring Boot backend with MySQL handling the contact form, containerized with Docker.",
     techStack: [
