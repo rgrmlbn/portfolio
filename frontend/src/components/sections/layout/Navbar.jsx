@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedinIn, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
-import logo from "../../assets/images/logocon.png";
+import logo from "../../../assets/images/logocon.png";
 
 const NAV_LINKS = [
   { label: "About", href: "#home" },
@@ -64,9 +64,7 @@ export default function Navbar() {
               src={logo}
               alt="Logo"
               className="h-10 w-auto md:h-12"
-              style={
-                isPopping ? { animation: "logoPop 0.4s ease" } : undefined
-              }
+              style={isPopping ? { animation: "logoPop 0.4s ease" } : undefined}
               onAnimationEnd={() => setIsPopping(false)}
             />
           </button>
@@ -76,7 +74,6 @@ export default function Navbar() {
 
           <div className="hidden gap-10 md:flex">
             {NAV_LINKS.map((link) => (
-              
               <a
                 key={link.label}
                 href={link.href}
@@ -111,7 +108,6 @@ export default function Navbar() {
 
         {/* Right */}
         <div className="flex items-center gap-3">
-          
           <a
             href="mailto:rogerabarico21@gmail.com"
             className="
