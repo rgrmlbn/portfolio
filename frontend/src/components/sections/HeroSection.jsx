@@ -18,8 +18,8 @@ export default function HeroSection() {
   const { output: hireMeText } = useTypewriter(
     [
       "Learn. Build. Grow.",
-      "Driven to Improve",
-      "Ready for What's Next"
+      "Driven to Improve.",
+      "Ready for What's Next."
     ],
     {
       speed: 120,
