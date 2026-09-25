@@ -19,8 +19,9 @@ import {
   SiRedis,
   SiJsonwebtokens,
   SiTailwindcss,
+  SiCplusplus,
 } from "react-icons/si";
-
+ 
 const projects = [
   {
     image: dentalPreview,
@@ -65,6 +66,7 @@ const projects = [
       { name: "HTML5", icon: FaHtml5 },
       { name: "CSS3", icon: FaCss3Alt },
       { name: "JavaScript", icon: FaJs },
+      { name: "C++", icon: SiCplusplus },
       { name: "PHP", icon: FaPhp },
       { name: "MySQL", icon: SiMysql },
       { name: "Google Cloud", icon: SiGooglecloud },
@@ -73,7 +75,7 @@ const projects = [
     githubUrl: "https://github.com/rgrmlbn/Internflo-Capstone-Thesis-",
   },
 ];
-
+ 
 function ProjectCard({
   image,
   alt,
@@ -90,16 +92,16 @@ function ProjectCard({
         alt={alt}
         className="block aspect-video w-full cursor-zoom-in object-cover transition-opacity duration-150 hover:opacity-90"
       />
-
+ 
       <div className="flex flex-1 flex-col bg-[var(--color-white)] px-5 pb-6 pt-5 md:px-6 md:pb-[1.6rem] md:pt-[1.4rem] ">
         <h3 className="mb-2 font-[var(--font-display)] text-[1.05rem] font-bold text-[var(--color-ink)] md:text-[1.2rem]">
           {title}
         </h3>
-
+ 
         <p className="mb-3 text-[0.82rem] leading-[1.6] text-[var(--color-graph)] md:mb-4 md:text-[0.88rem] md:leading-[1.65]">
           {description}
         </p>
-
+ 
         <div className="mb-5 flex flex-wrap gap-x-4 gap-y-2 md:mb-[1.2rem]">
           {techStack.map(({ name, icon: Icon }) => (
             <span
@@ -111,7 +113,7 @@ function ProjectCard({
             </span>
           ))}
         </div>
-
+ 
         <div className="mt-auto flex gap-3">
           <a
             href={demoUrl}
@@ -122,7 +124,7 @@ function ProjectCard({
             <FaExternalLinkAlt className="shrink-0 text-[0.68rem] md:text-[0.72rem]" />
             View
           </a>
-
+ 
           <a
             href={githubUrl}
             target="_blank"
@@ -137,7 +139,7 @@ function ProjectCard({
     </div>
   );
 }
-
+ 
 export default function ProjectSection() {
   return (
     <section id="projects" className="bg-[var(--color-taste)] py-16 md:py-24">
@@ -151,7 +153,7 @@ export default function ProjectSection() {
           </h2>
           <div className="mx-auto mt-4 h-[3px] w-30 rounded bg-[var(--color-ink)]" />
         </div>
-
+ 
         <div className="grid w-full grid-cols-1 items-stretch gap-6 md:max-w-[1200px] md:mx-auto md:grid-cols-2 md:gap-8 lg:grid-cols-3">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
