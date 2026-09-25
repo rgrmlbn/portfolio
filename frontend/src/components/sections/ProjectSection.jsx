@@ -19,7 +19,6 @@ import {
   SiRedis,
   SiJsonwebtokens,
   SiTailwindcss,
-  SiCplusplus,
 } from "react-icons/si";
  
 const projects = [
@@ -66,7 +65,6 @@ const projects = [
       { name: "HTML5", icon: FaHtml5 },
       { name: "CSS3", icon: FaCss3Alt },
       { name: "JavaScript", icon: FaJs },
-      { name: "C++", icon: SiCplusplus },
       { name: "PHP", icon: FaPhp },
       { name: "MySQL", icon: SiMysql },
       { name: "Google Cloud", icon: SiGooglecloud },

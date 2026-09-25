@@ -21,6 +21,12 @@ const skillCategories = [
           "A high-level scripting language that powers interactivity and dynamic behavior on the web.",
       },
       {
+        name: "C++",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+        tooltip:
+          "A high-performance, general-purpose programming language used for system software, performance-critical applications, and game development.",
+      },
+      {
         name: "PHP",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
         tooltip:
