@@ -54,7 +54,7 @@ const projects = [
       { name: "Tailwind CSS", icon: SiTailwindcss },
       { name: "Docker", icon: FaDocker },
     ],
-    demoUrl: "",
+    demoUrl: "https://roomance-booking.vercel.app/",
     githubUrl: "https://github.com/rgrmlbn/Dental-Appointment-System",
   },
   {
