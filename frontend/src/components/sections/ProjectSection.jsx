@@ -2,6 +2,7 @@
 import internfloPreview from "../../assets/images/projects/internflo/internfloprev.png";
 import dentalPreview from "../../assets/images/projects/dentalcare/dentalprev.png";
 import portfolioPreview from "../../assets/images/projects/portfolio/portfolioprev.png";
+import roomancePreview from "../../assets/images/projects/roomance/roomanceprev.png";
 import {
   FaGithub,
   FaReact,
@@ -39,6 +40,23 @@ const projects = [
     demoUrl: "https://dentalcare-appointment.vercel.app/",
     githubUrl: "https://github.com/rgrmlbn/Dental-Appointment-System",
     },
+  {
+    image: roomancePreview,
+    alt: "Roomance Staycation Booking System Preview",
+    title: "Roomance — Staycation Booking System",
+    description: "Roomance is a staycation booking system that enables hosts to manage property listings, handle reservations, and streamline bookings using a Spring Boot backend and React frontend. It features a Tailwind CSS UI with TanStack Query and Axios for data fetching, secure booking flows, RESTful APIs, MySQL database integration, and Docker containerization for consistent deployment.",
+    techStack: [
+      { name: "Spring Boot", icon: SiSpring },
+      { name: "React", icon: FaReact },
+      { name: "MySQL", icon: SiMysql },
+      { name: "Redis", icon: SiRedis },
+      { name: "JWT", icon: SiJsonwebtokens },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Docker", icon: FaDocker },
+    ],
+    demoUrl: "",
+    githubUrl: "https://github.com/rgrmlbn/Dental-Appointment-System",
+  },
   {
     image: portfolioPreview,
     alt: "Portfolio Preview",
