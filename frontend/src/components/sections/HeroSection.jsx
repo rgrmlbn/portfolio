@@ -65,7 +65,7 @@ export default function HeroSection() {
       id="home"
       className="relative min-h-screen overflow-hidden bg-[var(--color-taste)]"
     >
-      <div className="container grid grid-cols-1 items-center pb-8 pt-24 text-center md:grid-cols-2 md:pb-12 md:pt-28 md:text-left">
+      <div className="container grid grid-cols-1 items-center pb-8 pt-24 text-center md:grid-cols-2 md:pb-24 md:pt-24 md:text-left">
         {/* Hero Image */}
         <div className="relative z-10 mt-6 mb-8 flex items-end justify-center animate-[fadeUp_0.9s_0.45s_ease_both] md:mb-0 md:mt-0 md:order-1">
           <div className="relative w-[min(400px,90%)]">

@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <nav
       className="
-        fixed
+        sticky
         inset-x-0
         top-0
         z-[100]
