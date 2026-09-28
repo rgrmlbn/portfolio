@@ -27,8 +27,7 @@ const projects = [
     image: dentalPreview,
     alt: "Dental Appointment System Preview",
     title: "DentalCare — Dental Appointment System",
-    description:
-      "Dental appointment system that enables clinics to manage patient records, schedule appointments, and streamline operations using a Spring ecosystem backend and React frontend. It features secure appointment booking, RESTful APIs, MySQL database integration, patient management, and Docker containerization for consistent deployment.",
+    description: "Dental appointment system that enables clinics to manage patient records, schedule appointments, and streamline operations. It features secure online booking for patients, with every appointment delivered straight to the clinic.",
     techStack: [
       { name: "Spring Boot", icon: SiSpring },
       { name: "React", icon: FaReact },
@@ -44,7 +43,7 @@ const projects = [
     image: roomancePreview,
     alt: "Roomance Staycation Booking System Preview",
     title: "Roomance — Staycation Booking System",
-    description: "Roomance is a staycation booking system that enables hosts to manage property listings, handle reservations, and streamline bookings using a Spring Boot backend and React frontend. It features a Tailwind CSS UI with TanStack Query and Axios for data fetching, secure booking flows, RESTful APIs, MySQL database integration, and Docker containerization for consistent deployment.",
+    description: "Staycation booking system that enables hosts to manage property listings, handle reservations, and streamline bookings. Hosts list their properties, and guests browse and book them through a responsive, easy-to-use interface.",
     techStack: [
       { name: "Spring Boot", icon: SiSpring },
       { name: "React", icon: FaReact },
@@ -61,8 +60,7 @@ const projects = [
     image: portfolioPreview,
     alt: "Portfolio Preview",
     title: "Portfolio — Personal Website",
-    description:
-      "A personal portfolio website built to showcase my skills, projects, and experience as a developer. Features a React and Tailwind CSS frontend with TanStack Query and Axios for data fetching, React Hook Form for validated contact submissions, and a Spring Boot backend with MySQL handling the contact form, containerized with Docker.",
+    description: "Personal portfolio website built to showcase my skills, projects, and experience as a developer. It features a contact form that lets visitors reach out directly, with every submission validated and saved for follow-up.",
     techStack: [
       { name: "Spring Boot", icon: SiSpring },
       { name: "React", icon: FaReact },
@@ -77,8 +75,7 @@ const projects = [
     image: internfloPreview,
     alt: "Internflo Preview",
     title: "Internflo — Internship Portal",
-    description:
-      "Internflo is an internship portal connecting University of Caloocan City students with opportunities that match their courses and qualifications using Google Maps API and NLP. It features an OJT Monitoring System for advisors to track student internships and help students find roles aligned with their skills, capabilities, education, and company requirements.",
+    description: "Internship portal connecting University of Caloocan City students with opportunities that match their courses and skills. It features an OJT Monitoring System for advisors to track internships and help students find roles that fit them.",
     techStack: [
       { name: "HTML5", icon: FaHtml5 },
       { name: "CSS3", icon: FaCss3Alt },
