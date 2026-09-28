@@ -54,7 +54,7 @@ const projects = [
       { name: "Docker", icon: FaDocker },
     ],
     demoUrl: "https://roomance-booking.vercel.app/",
-    githubUrl: "https://github.com/rgrmlbn/Dental-Appointment-System",
+    githubUrl: "https://github.com/rgrmlbn/Staycation-Booking-System",
   },
   {
     image: portfolioPreview,
