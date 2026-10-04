@@ -2,6 +2,7 @@ export default function FormField({
   label,
   name,
   register,
+  rules,
   error,
   as = "input",
   type = "text",
@@ -33,7 +34,7 @@ export default function FormField({
         rows={as === "textarea" ? rows ?? 5 : undefined}
         placeholder={placeholder}
         className={`${baseClasses} ${borderClasses}`}
-        {...register(name)}
+        {...register(name, rules)}
         {...rest}
       />
 
