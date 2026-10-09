@@ -34,6 +34,7 @@ const projects = [
       { name: "MySQL", icon: SiMysql },
       { name: "Redis", icon: SiRedis },
       { name: "JWT", icon: SiJsonwebtokens },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
       { name: "Docker", icon: FaDocker },
     ],
     demoUrl: "https://dentalcare-appointment.vercel.app/",
